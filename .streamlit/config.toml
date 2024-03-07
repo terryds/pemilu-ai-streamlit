@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#D21034"  # A darker shade of red, similar to the Indonesian flag
+backgroundColor = "#F5F5F5"  # Light grey background for less brightness
+secondaryBackgroundColor = "#E8E8E8"
+textColor = "#000000"
+font = "sans serif"
