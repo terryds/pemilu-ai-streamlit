@@ -2,7 +2,7 @@ import streamlit as st
 import duckdb
 
 from visualization import show_visualization
-from sql_query import show_sql_query
+from about import show_about
 from ask_ai import show_ask_ai
 
 # Initialize connection.
@@ -27,11 +27,11 @@ st.title('2024 Indonesian Presidential Election Visualization')
 
 
 st.sidebar.title('Navigation')
-page = st.sidebar.radio('Select a Page:', ['Data Visualization', 'SQL Query', 'Ask AI'])
+page = st.sidebar.radio('Select a Page:', ['Data Visualization', 'Ask AI', 'About' ])
 
 if page == 'Data Visualization':
     show_visualization(conn)
-elif page == 'SQL Query':
-    show_sql_query(conn)
+elif page == 'About':
+    show_about()
 elif page == 'Ask AI':
     show_ask_ai(conn)

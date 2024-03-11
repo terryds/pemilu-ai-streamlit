@@ -156,7 +156,7 @@ def show_ask_ai(conn):
 
     openai_api_key = st.text_input('OpenAI API Key', type='password', disabled=st.session_state.is_submitting)
 
-    st.warning('Please note that there are still missing data in some of regions. For example, (as of March 6th, 2024), the data in https://pemilu2024.kpu.go.id/pilpres/hitung-suara/11/1118/111806/1118062041/1118062041001 (which API can be hit at https://sirekap-obj-data.kpu.go.id/pemilu/hhcw/ppwp/11/1118/111806/1118062041/1118062041001.json ) has not yet been inputted. Only some candidates get inputted', icon="⚠️")
+    st.info('Please note that KPU (General Election Committee) said there might be some invalid data, related to OCR issues and some data may not have been inputted yet. Source: https://www.cnnindonesia.com/nasional/20240304163444-617-1070317/kpu-sebut-suara-psi-janggal-akibat-teknologi-ocr-sirekap-tidak-akurat')
 
     with st.form('my_form'):
         query = st.text_area('Ask something here', disabled=st.session_state.is_submitting)
