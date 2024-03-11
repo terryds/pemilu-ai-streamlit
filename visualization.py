@@ -17,7 +17,7 @@ def fetch_options(conn, table_name, column_id=None, selected_id=None):
 def show_visualization(conn):
     st.header('Regional Vote Data Visualization', divider='rainbow')
 
-    st.info('Database retrieved from https://github.com/terryds/pemilu-2024-scraper/releases (Last update is on March, 5th)')
+    st.info('Database retrieved from https://github.com/terryds/pemilu-2024-scraper/releases (Last update is on March, 11th)')
     st.info('Please note that KPU (General Election Committee) said there might be some invalid data, related to OCR issues and some data may not have been inputted yet. Source: https://www.cnnindonesia.com/nasional/20240304163444-617-1070317/kpu-sebut-suara-psi-janggal-akibat-teknologi-ocr-sirekap-tidak-akurat')
 
     # Dropdown for Provinsi
