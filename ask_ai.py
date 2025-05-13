@@ -142,7 +142,7 @@ If the question does not seem related to the database, just return "I don't know
     suffix = """If there is information about the question on the database schema on my system prompt, then I should use that information to see what I can query. If there is no information about the question on the database schema and I don't know what to query, I should look at the tables in the database to see what I can query.  Then I should query the schema of the most relevant tables."""
 
     db = SQLDatabase.from_uri("duckdb:///pemilu2024-kpu.duckdb", {'connect_args': { 'read_only': True}})
-    llm = ChatOpenAI(model="gpt-4-turbo-preview", temperature=0, openai_api_key=openai_api_key)
+    llm = ChatOpenAI(model="gpt-4.1", temperature=0, openai_api_key=openai_api_key)
     agent_executor = create_sql_agent(llm, db=db, agent_type="openai-tools", prefix=prefix, suffix=suffix, verbose=True)
     result = agent_executor.invoke(query)
     st.success(result["output"])
